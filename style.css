@@ -1,0 +1,226 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: "微软雅黑","黑体","宋体";
+}
+
+#wrap,.backGround{
+    width:100%;
+    height: 100%;
+    position:fixed;
+}
+
+.backGround{
+    background: url(./imgs/full_res_Thu_Jan_16_2020.jpg);
+    background-size: cover;
+    background-origin: border-box;
+    background-position: center;
+}
+
+/* 弹出的设置窗口 */
+.setBox{
+    width:500px;
+    height:150px;
+    position:fixed;
+    background-color: rgba(70, 70, 70, 0.8);
+    border-radius: 20px;
+    top:20px;
+    z-index: 100;
+    left:50%;
+    transform: translateX(-50%);
+    animation: comeIn 1000ms ease-in-out;
+}
+
+.setBox span:first-of-type{
+    font-size: 25px;
+    display: block;
+    position: relative;
+    left:50%;
+    transform: translateX(-50%);
+    width:500px;
+    text-align: center;
+    margin-top:10px;
+    color: #ede3e7;
+}
+
+#inUrl{
+    width:400px;
+    height:35px;
+    position: relative;
+    left:50%;
+    transform: translateX(-50%);
+    margin-top: 10px;
+    border-radius: 10px;
+    padding:0 5px;
+    font-size: 20px;
+}
+
+.setBox span:last-of-type{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.setBox span>input{
+    width:60px;
+    height:38px;
+    color:#ede3e7;
+    background-color: rgb(2, 182, 253);
+    border-radius: 17px;
+    margin:0 40px;
+}
+@keyframes comeIn{
+    from{
+        top:-150px;
+    }
+    to{
+        top:20px;
+    }
+}
+
+
+
+
+/* 以下为主体部分 */
+
+#wrap .contain{
+   
+    width:1000px;
+    height: 500px;
+    /* background-color:rgba(255, 255, 190, 0.2); */
+    position: relative;
+    margin:auto;
+    margin-top: 200px;
+    border-radius: 30px;
+}
+
+.contain_input{
+    position: relative;
+    width:100%;
+    height:100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contain_input input:first-of-type{
+    width:400px;
+    height:40px;
+    box-shadow: black;
+    border-radius: 20px;
+    font-size: 20px;
+    padding: 15px;
+}
+
+button,input{
+    outline: none;
+}
+
+.contain_input input:last-of-type{
+    margin-left: 10px;
+    width:80px;
+    height:40px;
+    border-radius: 20px;
+    color:white;
+    background-color:rgb(2, 182, 253);
+    cursor: pointer;
+}
+
+.contain_key{
+    width:100%;
+    height:250px;
+    margin-top: 150px;
+    /* background-color: rgba(255, 180, 190, 0.2); */
+    display:grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-content: center;
+}
+
+.contain_key .outer{
+    width:70px;
+    height:55px;
+    border-radius: 20px;
+    margin:10px;
+    background-color:rgba(0,0,0,1);
+    display: inline-block;
+    position: relative;
+    box-shadow: 0 5px 5px 0 rgba(0,0,0,1);
+}
+
+.contain_key .outer:hover{
+    transform:translateY(-10px) scale(1.2) ;
+}
+
+.contain_key .outer span{
+    width:70px;
+    height:55px;
+    border-radius: 20px;
+    /* background-color:rgba(0,0,0,0); */
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+
+.key_firstRow{
+    width:1000px;
+    height:50px;
+    display: flex;
+    justify-content: center;
+}
+
+.key_secondRow{
+    width:1000px;
+    height:50px;
+    display: flex;
+    justify-content: center;
+}
+
+.key_thirdRow{
+    width:1000px;
+    height:50px;
+    display: flex;
+    justify-content: center;
+}
+
+.contain_key .keyWord{
+    position: absolute;
+    top:8px;
+    left:8px;
+
+}
+/* 隐藏最后一个按钮 */
+.key_thirdRow .outer:last-of-type{
+    visibility: hidden;
+}
+
+/* 图标 */
+.contain_key .local_icon{
+    background-color: #fff;
+    width:25px;
+    height: 25px;
+    overflow: hidden;
+    position: absolute;
+    top:25px;
+    left: 23px;
+    background-position: center;
+    background: no-repeat;
+    background-size: 100%;
+}
+
+.contain_key .set{
+    width:10px;
+    height:10px;
+    position: absolute;
+    top:35px;
+    right:7px;
+}
+
+.contain_key .set button{
+    background-color: rgba(0,0,0,0.8);
+    border: none;
+}
+
+.contain_key .set svg{
+    cursor: help;
+}
